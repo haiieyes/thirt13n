@@ -1,0 +1,62 @@
+{% load static %}
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="{% static 'styles.css' %}" type="text/css" />
+    <title>THIRT13N</title>
+  </head>
+  <body>
+    <!-- Potential GIF/Visuals -->
+    <div id='gif'>
+        <!--<h1>--GIF--</h1>-->
+    </div>
+    
+    <!-- Content -->
+    <div id='cont'>
+        <div class='container' id='contCon'>
+            <!-- NAV -->
+            <nav class="nav" id='indexNav'>
+                <a class="nav-link nav-items" href="#">SHOWS</a>
+                <a class="nav-link nav-items" href="#">MUSIC</a>
+                <img src="{% static 'images/navLogo1.png' %}" id='navLogo'/>
+                <a class="nav-link nav-items" href="/shop">SHOP</a>
+                <a class="nav-link nav-items" href="#">CART (0)</a>
+            </nav>
+            
+            <!-- Space -->
+            <section class='container space1'></section>
+            
+            <!-- CTA -->
+            <section class='container' id='cta'>
+                <!-- Album Art -->
+                <div id='albumArt'></div>
+                
+                <!-- Label -->
+                <div id='label'>
+                    <h6>THIRT13N: CHAPTER I</h6>
+                    <p>THIRT13N // 2017</p>
+                    <button type="button" class="btn btn-outline-light" id='ctaButton'>LISTEN NOW</button>
+                </div>
+                
+                <!-- Space -->
+                <div class='space2'></div>
+            </section>
+        </div>
+        
+    </div>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+  </body>
+</html>
