@@ -69,3 +69,14 @@ html, body {
     flex: 2;
     height: 100%;
 }
+
+.box {
+    height: 100%;
+    width: 100%;
+}
+
+.boxItem {
+    height: 100%;
+    width: 100%;
+    background-color: #443A31;
+}
