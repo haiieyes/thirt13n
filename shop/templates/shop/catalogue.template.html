@@ -1,0 +1,21 @@
+{% extends 'base.template.html' %}
+
+{%block content %}
+<section id='itemsCon'>
+    <!-- GIF -->
+    <div id='gif'></div>
+    
+    <!-- Content -->
+    <div>
+        {%for product in all_products %}
+        <div class="card" style="width: 18rem;">
+            <div class="card-body">
+                <h5 class="card-title">{{product.name}}</h5>
+                <p class="card-text">{{product.description}}</p>
+                <a href="#" class="btn btn-primary">Add to cart</a>
+            </div>
+        </div>
+        {%endfor%}
+    </div>
+</section>
+{% endblock %}
