@@ -33,5 +33,8 @@ def login(request):
             'form':login_form
         })
 
+def register(request):
+    return render(request, 'accounts/register.template.html')
+
 def shop(request):
     return render(request, 'shop.template.html')
