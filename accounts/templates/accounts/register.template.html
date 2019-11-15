@@ -3,5 +3,13 @@
 {% block page_heading %}User Registration{% endblock %}
 
 {% block content %}
-    <p>If you already have an account, you can <a href="{% url 'login' %}">sign in </a></p>
+<div id='logCon'>
+    <div id='logConCon'>
+        <form method='POST'>
+            {% csrf_token %}
+            {{ form.as_p }}
+            <input class="btn btn-light btn-lg btn-block mt-4 mb-2" type='submit' value='Create Account'/>
+        </form>
+    </div>
+</div>
 {% endblock %}

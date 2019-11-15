@@ -1,6 +1,6 @@
 from django.shortcuts import render, redirect, reverse, HttpResponse
 from django.contrib import auth, messages
-from .forms import UserLoginForm
+from .forms import UserLoginForm, UserRegistrationForm
 
 # Create your views here.
 def index(request):
@@ -34,7 +34,27 @@ def login(request):
         })
 
 def register(request):
-    return render(request, 'accounts/register.template.html')
+    if request.method == 'POST':
+        form = UserRegistrationForm(request.POST)
+        if form.is_valid():
+            form.save()
+            user = auth.authenticate(username=request.POST['username'],
+                                     password=request.POST['password1'])
+            if user:
+                auth.login(user=user, request=request)
+                messages.success(request, "You have successfully signed up!")
+            else:
+                messages.error(request, "Whoops, we are unable to register your account at this time.")
+            return render(request, 'accounts/reindex.template.html')
+        else:
+            return render(request, 'accounts/register.template.html', {
+                'form':form
+            })
+    else:
+        form = UserRegistrationForm()
+        return render(request, 'accounts/register.template.html', {
+            'form':form
+        })
 
 def shop(request):
     return render(request, 'shop.template.html')
