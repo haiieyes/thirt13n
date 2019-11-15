@@ -1,0 +1,117 @@
+html, body {
+    width: 100%;
+    height: 150vh;
+    background-color: black;
+    
+    scroll-snap-type: y mandatory;
+}
+
+/* Main Body */
+#gif {
+    /*background-color: black;*/
+    background-image: url('images/gif3.gif');
+    background-size: cover;
+    background-position: center bottom;
+    width: 100%;
+    height: 100vh;
+    
+    /*display: flex;*/
+    /*justify-content: center;*/
+    /*align-items: center;*/
+    
+    scroll-snap-align: start;
+}
+
+#cont {
+    background-image: url('images/bg1.png');
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    height: 100vh;
+    
+    scroll-snap-align: start;
+}
+
+#contCon {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Navigation */
+#indexNav {
+    flex: 1;
+    
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding-top: 3em;
+}
+
+#navLogo {
+    height: 7em;
+}
+
+.nav-items {
+    color: white;
+    font-size: 1em;
+    
+    transition-property: color;
+    transition-duration: .5s;
+    transition-timing-function: ease-in-out;
+}
+
+.nav-items:hover {
+    color: #cccccc;
+    text-decoration: none;
+}
+
+/* Spaces */
+.space1 {
+    flex: 6;
+}
+
+.space2 {
+    flex: 3;
+}
+
+/* CTA */
+#cta {
+    flex: 3;
+    padding-bottom: 3em;
+    display: flex;
+}
+
+#albumArt {
+    flex: 2;
+    height: 200px;
+    background-image: url('images/albumart.jpg');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+#label {
+    flex: 3;
+    color: white;
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#label h6 {
+    font-weight: bolder;
+    font-size: 2.5em;
+}
+
+#label p {
+    font-weight: lighter;
+    font-style: italic;
+    font-size: 2em;
+}
+
+#ctaButton {
+    font-size: 1em;
+}

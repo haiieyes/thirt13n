@@ -126,3 +126,8 @@ AUTHENTICATION_BACKENDS = (
     # Needed to login by custom User model, regardless of `allauth`
     "django.contrib.auth.backends.ModelBackend",
 )
+
+# enable static files
+STATICFILES_DIRS = [
+    os.path.join(BASE_DIR, "static")
+]
