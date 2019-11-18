@@ -6,13 +6,14 @@
     <div id='gif'></div>
     
     <!-- Content -->
-    <div>
+    <div style='display:flex; justify-content:space-between'>
         {%for product in all_products %}
         <div class="card" style="width: 18rem;">
             <div class="card-body">
-                <h5 class="card-title">{{product.name}}</h5>
-                <p class="card-text">{{product.description}}</p>
-                <a href="#" class="btn btn-primary">Add to cart</a>
+                <img src="{{ product.image.url }}" class="card-img-top">
+                <h5 class="card-title">{{ product.name }}</h5>
+                <p class="card-text">{{ product.description }}</p>
+                <a href="{% url 'add_to_cart' product_id=product.id %}" class="btn btn-primary">Add to cart</a>
             </div>
         </div>
         {%endfor%}

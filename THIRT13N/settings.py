@@ -38,7 +38,8 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'accounts',
-    'shop'
+    'shop',
+    'cart'
 ]
 
 MIDDLEWARE = [
@@ -132,3 +133,11 @@ AUTHENTICATION_BACKENDS = (
 STATICFILES_DIRS = [
     os.path.join(BASE_DIR, "static")
 ]
+
+LOGIN_URL = '/accounts/login'
+
+CRISPY_TEMPLATE_PACK = 'bootstrap4'
+
+# For files upload
+MEDIA_URL = '/media/'
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
