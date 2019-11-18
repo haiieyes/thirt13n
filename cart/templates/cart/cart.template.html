@@ -3,20 +3,24 @@
 {% block content %}
 
 {%for cart_item in all_cart_items %}
-<div class="media">
+<div class="media cartItem">
   <img src="{{ cart_item.product.image.url }}" class="mr-3">
   <div class="media-body">
     <h5 class="mt-0">{{cart_item.product.name}}</h5>
     <p>
-    {{cart_item.description}}
+    {{cart_item.product.description}}
     </p>
     <p>
-        Cost: ${{cart_item.product.getCostInDollars}} <br/>
-        Quantity: {{cart_item.quantity }}
-        <a href="{% url 'remove_from_cart' cart_item_id=cart_item.id %}">Remove</a>
+      Cost: ${{cart_item.product.getCostInDollars}} <br/>
+      Quantity: {{cart_item.quantity}}
+    </p>
+    <p>
+      <a href="{% url 'remove_from_cart' cart_item_id=cart_item.id %}">Remove</a>
     </p>
   </div>
 </div>
 {%endfor%}
+
+<a href='#' class="btn btn-outline-secondary btn-lg btn-block mt-5" style='color:white;'>Block level button</a>
 
 {% endblock %}
