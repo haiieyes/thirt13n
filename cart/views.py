@@ -1,7 +1,6 @@
-from django.shortcuts import render, redirect, reverse
+from django.shortcuts import render, redirect, reverse, HttpResponse
 from .models import CartItem
 from shop.models import Product
-from shop.views import catalogue
 # Create your views here.
 
 def view(request):

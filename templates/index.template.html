@@ -26,14 +26,15 @@
             <nav class="nav" id='indexNav'>
                 <a class="nav-link nav-items" href="/shop">SHOP</a>
                 <a class="nav-link nav-items" href="#">MUSIC</a>
-                <img src="{% static 'images/navLogo1.png' %}" id='navLogo'/>
+                <img src="{% static 'images/navLogo1.png' %}" id='navLogo' href="/"/>
                 {% if not user.is_authenticated %}
                 <a class="nav-link nav-items" href="{% url 'login' %}">LOGIN</a>
+                <a class="nav-link nav-items">CART</a>
                 {%endif%}
                 {%if user.is_authenticated %}
                 <a class="nav-link nav-items" href="{% url 'logout' %}">LOGOUT</a>
+                <a class="nav-link nav-items" href="/cart">CART</a>
                 {%endif%}
-                <a class="nav-link nav-items" href="/shop">CART</a>
             </nav>
             
             <!-- Space -->

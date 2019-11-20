@@ -51,6 +51,10 @@ html, body {
     height: 7em;
 }
 
+#navLogo:hover {
+    cursor: pointer;
+}
+
 .nav-items {
     color: white;
     font-size: 1em;

@@ -1,0 +1,21 @@
+{% extends 'base.template.html' %}
+
+{% block content %}
+<div style="
+  height: 60vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+">
+  <form method="POST">
+    {% csrf_token %}
+    <script src="https://checkout.stripe.com/checkout.js" class="stripe-button"
+            data-key="{{key}}"
+            data-description="Donate"
+            data-amount="{{amount}}"
+            data-locale="auto"></script>
+    <input type='hidden' name='amount' value='{{amount}}'/>
+  </form>
+</div>
+
+{%endblock%}

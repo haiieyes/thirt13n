@@ -39,7 +39,8 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'accounts',
     'shop',
-    'cart'
+    'cart',
+    'checkout'
 ]
 
 MIDDLEWARE = [
@@ -141,3 +142,6 @@ CRISPY_TEMPLATE_PACK = 'bootstrap4'
 # For files upload
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+
+STRIPE_PUBLISHABLE_KEY = os.environ.get('STRIPE_PUBLISHABLE_KEY')
+STRIPE_SECRET_KEY = os.environ.get('STRIPE_SECRET_KEY')

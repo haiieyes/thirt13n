@@ -109,5 +109,9 @@ body {
 .cartItem {
     padding: 20px;
     background-color: #efefef;
-    margin-top: 2em;
+    margin-bottom: 2em;
+}
+
+#navLogo:hover {
+    cursor: pointer;
 }
