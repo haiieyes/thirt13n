@@ -26,7 +26,7 @@ SECRET_KEY = 'o(k_bz9+j6t=q5p8iaqapn_46h-#upnjj0!+)5sf!vswx9##0@'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['*']
+ALLOWED_HOSTS = ['https://haiieyes-thirt13n.herokuapp.com/']
 
 
 # Application definition

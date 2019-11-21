@@ -1,4 +1,5 @@
 from django.db import models
+import Pillow
 
 # Create your models here.
 class Product(models.Model):

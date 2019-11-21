@@ -1,0 +1,1 @@
+web: gunicorn THIRT13N.wsgi:application
