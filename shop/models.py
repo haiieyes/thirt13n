@@ -1,5 +1,5 @@
 from django.db import models
-import Pillow
+import Image
 
 # Create your models here.
 class Product(models.Model):
