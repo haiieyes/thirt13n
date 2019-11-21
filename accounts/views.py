@@ -5,6 +5,12 @@ from .forms import UserLoginForm, UserRegistrationForm
 # Create your views here.
 def index(request):
     return render(request, 'index.template.html')
+    
+def album(request):
+    return render(request, 'accounts/album.template.html')
+    
+def music(request):
+    return render(request, 'accounts/music.template.html')
 
 def logout(request):
     auth.logout(request)

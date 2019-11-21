@@ -1,5 +1,20 @@
 {% extends 'base.template.html' %}
 
+{% load static %}
+
+{%block footer_js %}
+
+<script type="text/javascript" src="https://js.stripe.com/v2/"></script>
+
+<script type="text/javascript">
+    //<![CDATA[
+        Stripe.publishableKey = '{{ publishable }}';
+    //]]>
+</script>
+
+<script src="{% static 'checkout/stripe.js' %}"></script>
+{%endblock%}
+
 {% block content %}
 <div style="
   height: 60vh;
@@ -11,7 +26,7 @@
     {% csrf_token %}
     <script src="https://checkout.stripe.com/checkout.js" class="stripe-button"
             data-key="{{key}}"
-            data-description="Donate"
+            data-description="Checkout"
             data-amount="{{amount}}"
             data-locale="auto"></script>
     <input type='hidden' name='amount' value='{{amount}}'/>

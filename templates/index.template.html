@@ -25,7 +25,7 @@
             <!-- NAV -->
             <nav class="nav" id='indexNav'>
                 <a class="nav-link nav-items" href="/shop">SHOP</a>
-                <a class="nav-link nav-items" href="#">MUSIC</a>
+                <a class="nav-link nav-items" href="{% url 'music' %}">MUSIC</a>
                 <img src="{% static 'images/navLogo1.png' %}" id='navLogo' href="/"/>
                 {% if not user.is_authenticated %}
                 <a class="nav-link nav-items" href="{% url 'login' %}">LOGIN</a>
@@ -49,7 +49,7 @@
                 <div id='label'>
                     <h6>THIRT13N: CHAPTER I</h6>
                     <p>THIRT13N // 2017</p>
-                    <button type="button" class="btn btn-outline-light" id='ctaButton'>LISTEN NOW</button>
+                    <a href="{% url 'album' %}" class="btn btn-outline-light" id='ctaButton'>LISTEN NOW</a>
                 </div>
                 
                 <!-- Space -->

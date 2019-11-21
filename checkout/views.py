@@ -27,7 +27,7 @@ def charge(request):
         charge = stripe.Charge.create(
             amount=calculate_cart_cost(request),
             currency='SGD',
-            description='Test Description',
+            description='Checkout with THIRT13N',
             source=request.POST['stripeToken']
         )
         return redirect('index')
