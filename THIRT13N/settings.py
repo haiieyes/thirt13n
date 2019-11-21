@@ -12,6 +12,7 @@ https://docs.djangoproject.com/en/2.2/ref/settings/
 
 import dj_database_url
 import os
+import sys
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -26,7 +27,7 @@ SECRET_KEY = 'o(k_bz9+j6t=q5p8iaqapn_46h-#upnjj0!+)5sf!vswx9##0@'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['https://haiieyes-thirt13n.herokuapp.com/']
+ALLOWED_HOSTS = ['haiieyes-thirt13n.herokuapp.com']
 
 
 # Application definition
@@ -143,3 +144,9 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
 STRIPE_PUBLISHABLE_KEY = os.environ.get('STRIPE_PUBLISHABLE_KEY')
 STRIPE_SECRET_KEY = os.environ.get('STRIPE_SECRET_KEY')
+
+if 'test' in sys.argv:
+    DATABASES['default'] = {
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': 'mydatabase'
+    }
