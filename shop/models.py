@@ -1,5 +1,6 @@
+import  PIL
+from PIL import Image
 from django.db import models
-import Image
 
 # Create your models here.
 class Product(models.Model):
