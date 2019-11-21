@@ -10,6 +10,7 @@ For the full list of settings and their values, see
 https://docs.djangoproject.com/en/2.2/ref/settings/
 """
 
+import dj_database_url
 import os
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
@@ -52,6 +53,7 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'whitenoise.middleware.WhiteNoiseMiddleware',
 ]
 
 ROOT_URLCONF = 'THIRT13N.urls'
@@ -78,12 +80,8 @@ WSGI_APPLICATION = 'THIRT13N.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/2.2/ref/settings/#databases
 
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
-    }
-}
+DATABASES = {'default': dj_database_url.parse("postgres://rlbwgnnahhgzgz:eac4b64641ada379dd7e3ea96b33c0ae6c2f1061064de874647b0172b915810a@ec2-54-235-167-210.compute-1.amazonaws.com:5432/dc05u9ph4gpes")}
+
 
 
 # Password validation
@@ -122,7 +120,11 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/2.2/howto/static-files/
 
+# enable static files
 STATIC_URL = '/static/'
+STATICFILES_DIRS = (os.path.join(BASE_DIR, 'static'), )
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+
 
 AUTH_USER_MODEL = 'accounts.MyUser' 
 
@@ -130,11 +132,6 @@ AUTHENTICATION_BACKENDS = (
     # Needed to login by custom User model, regardless of `allauth`
     "django.contrib.auth.backends.ModelBackend",
 )
-
-# enable static files
-STATICFILES_DIRS = [
-    os.path.join(BASE_DIR, "static")
-]
 
 LOGIN_URL = '/accounts/login'
 
