@@ -2,8 +2,6 @@ import  PIL
 from PIL import Image
 from django.db import models
 
-from pyuploadcare.dj.models import ImageField
-
 # Create your models here.
 class Product(models.Model):
     name = models.CharField(max_length=255, blank=False)
@@ -18,7 +16,3 @@ class Product(models.Model):
         
     def getCostInDollars(self):
         return self.cost/100
-        
-class Photo(models.Model):
-    title = models.CharField(max_length=255, blank=False)
-    photo = ImageField(null=True)
