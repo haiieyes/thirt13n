@@ -12,6 +12,30 @@
     <!-- CSS -->
     <link rel="stylesheet" href="{% static 'baseStyles.css' %}" type="text/css" />
     <title>{%block title %}{%endblock%}</title>
+    
+    <!-- UploadCare -->
+    <script>
+        UPLOADCARE_PUBLIC_KEY = '779f51eb0438821bb472';
+    </script>
+
+    <script src="https://ucarecdn.com/libs/widget/3.x/uploadcare.full.min.js"></script>
+    
+    <style>
+        .uploader-button .uploadcare--widget__button_type_open {background-color: #373737;}
+    </style>
+    
+    <script>
+      UPLOADCARE_LOCALE_TRANSLATIONS = {
+        buttons: {
+          choose: {
+            files: {
+              one: 'Upload Image'
+            }
+          }
+        }
+      }
+    </script>
+    
   </head>
   <body>
     <!-- Content -->
@@ -43,6 +67,10 @@
             {% endif %}
             
             {%block content %}{% endblock %}
+            
+            <span class="uploader-button">
+                <input type="hidden" role="uploadcare-uploader" data-tabs="file camera" />
+            </span>
             
         </div>
         
