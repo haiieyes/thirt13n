@@ -25,7 +25,8 @@
                 justify-content: space-around;
                 align-items: center;
             ">
-                <img src="{{ product.image.url }}" class="card-img-top mb-4">
+                
+                <img src="{{ product.image }}" class="card-img-top mb-4">
                 <h5 class="card-title">{{ product.name }}</h5>
                 <p class="card-text mb-4">{{ product.description }}</p>
                 {%if user.is_authenticated %}
