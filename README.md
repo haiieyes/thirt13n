@@ -6,7 +6,7 @@ This E-Commerce Website is a public platform for anyone to purchase a
 merchandise of their choice.
 The deployed website can be found [here](https://haiieyes-thirt13n.herokuapp.com/).
 
-
+![mockup](https://raw.githubusercontent.com/haiieyes/thirt13n/master/1.png)
 
 ## UX
 
