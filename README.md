@@ -10,13 +10,56 @@ The deployed website can be found [here](https://haiieyes-thirt13n.herokuapp.com
 
 ## UX
 
+### Strategy
+
 Using the app should be easy for the user. It welcomes the user with a moving 
-image that would hint the user to scroll downwards. Using Snap-Scrolling, the 
+image that would hint the user to scroll downwards, for the index page. Using Snap-Scrolling, the 
 website only has two sections, the moving image and the actual website.
 
-A navigation bar is provided for the user to click around the sitemap.
 
-A Call-to-Action is added for the user to listen to the featured musician.
+
+### Scope
+
+- A navigation bar is provided for the user to click around the sitemap.
+
+- A Call-to-Action is added for the user to listen to the featured musician.
+
+- A catalogue will allow users to browse through the website and add selected items to cart.
+
+- A checkout will ensure that the user will properly enter bank details before they choose to purchase their items.
+
+- A cart will show the amount of items they have selected currently.
+
+- An account app will ensure the security of each account logged in.
+
+- A media app will revalidify the experience of purchasing their merchandises from their band of choice.
+
+
+
+### Structure
+
+Upon scrolling down from the moving image, the website should follow the size of the user's browser and should limit what can be scrollable.
+The navigation is not too complex, in this case, because there is only a need for 5 options:
+
+1. From the catalogue, you can choose to add it to cart.
+
+2. From the music page, you can already start to see the full list of spotlighted music videos.
+
+3. From the LOGIN/LOGOUT page, you can either log in or sign up and registration will be in another page. Upon registration, users will be redirected to the log in page.
+
+4. From the cart page (only activated once logged in), you can see the selected items and from there, only then you can choose to checkout and add in your card details, which is on another page.
+
+### Skeleton
+
+All information should be focused in the middle, except the Call to Action on the landing site. Thus, the rest of the informations are fixed to the middle of the screen, scrollable horizontally of vertically.
+
+
+
+### Surface
+
+Due to the fact that THIRT13N is a local hip-hop group. The color choices need to be fresh and dark. Hence, the main frames should revolve around those color palattes.
+With the background, reflecting a darker color, the information with texts should be highlighted with a lighter color beneath it.
+
 
 
 ### Design
@@ -108,6 +151,30 @@ the landing site.
 ## Deployment
 
 This site is hosted using Heroku, deployed directly from the master branch.
+
+
+1. Installed Heroku:
+    ``` 
+    sudo snap install heroku --classic
+    ``` 
+2. Logged into Heroku:
+    ``` 
+    heroku login
+    ``` 
+3. Create an app on Heroku:
+    ``` 
+    heroku create haiieyes-thirt13n
+    git remote -v
+    ``` 
+4. Add, commit within the app:
+    ``` 
+    sudo git add .
+    sudo git commit -m "Pushed to heroku"
+    sudo git push heroku master
+    ``` 
+
+#### With Thanks to Kun Xin Chor
+[Found here](https://github.com/kunxin-chor/)
 
 
 
